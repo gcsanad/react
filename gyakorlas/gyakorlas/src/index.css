@@ -1,0 +1,97 @@
+.faq-element{
+  max-width: 300px;
+  div{
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: center;
+
+    h1{
+      font-size: 1.5rem;
+    }
+    color: white;
+    background-color: darkred;
+    padding: 5px;
+  }
+
+  p{
+    transition: 1s;
+    height: 0px;
+    overflow: hidden;
+    /* transform:scaleZ(100); */
+    padding: 0;
+  }
+  p.open{
+    height: 200px;
+  }
+}
+
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  div{
+    width: 80vw;
+    aspect-ratio: 16/9;
+    background-color: white;
+    
+  
+  }
+}
+
+.switch{
+  --switch-size: 50px;
+  width: calc(var(--switch-size)*1.5);
+  height: var(--switch-size);
+  border: 2px solid black;
+  border-radius: calc(var(--switch-size)/2);
+  padding: 0px 5px;
+  position: relative;
+
+  div{
+    width: calc(var(--switch-size)/1.3);
+    background-color: red;
+    box-shadow: 0 0 20px white;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    margin-top: 5px;
+    transition: 2s;
+    position: absolute;
+  }
+  div.isDark{
+    transform: translateX(calc(var(--switch-size) - 15px));
+    background-size: cover;
+    background: gray;
+  }
+
+}
+
+body{
+  margin: 0;
+}
+
+.main{
+  background-color: skyblue;
+  min-block-size: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 1s;
+}
+
+.main.dark{
+  background-color: darkblue;
+
+  h1{
+    color: yellow;
+    text-shadow: 0px 0px 20px white;
+    font-family: 'Times New Roman', Times, serif;
+  }
+}
+
